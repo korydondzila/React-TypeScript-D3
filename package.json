@@ -3,12 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
-    "react-scripts-ts": "2.1.0"
+    "react-dom": "^15.6.1",
+    "react-scripts-ts": "2.1.0",
+    "react-test-renderer": "^15.6.1"
   },
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
-    "test": "cross-env NODE_ENV=test mocha --compilers ts:ts-node/register,tsx:ts-node/register --recursive \"./tests/**/*test.ts*\" --require ignore-styles"
+    "test": "mocha --compilers tsx:ts-node/register --recursive \"./tests/**/*test.ts*\" --require ignore-styles"
   },
   "dependencies": {
     "@types/chai": "^4.0.0",

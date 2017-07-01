@@ -1,7 +1,7 @@
 import { shallow } from "enzyme";
 import * as React from "react";
 import { expect } from "chai";
-import App from "../src/App";
+import App from "../src/components/App";
 import data from "../src/miserables";
 
 describe("Main App", () => {
