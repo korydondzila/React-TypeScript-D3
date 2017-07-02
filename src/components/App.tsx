@@ -18,7 +18,7 @@ export default class App extends React.Component<Props, {}> {
   constructor(props: Props) {
     super(props);
     this.simulation = d3.forceSimulation()
-      .force("link", d3.forceLink().id(function (d: any) {
+      .force("link", d3.forceLink().id(function (d: d3Types.d3Node) {
         return d.id;
       }))
       .force("charge", d3.forceManyBody().strength(-100))
