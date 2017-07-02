@@ -13,7 +13,6 @@ interface Props {
 }
 
 export default class App extends React.Component<Props, {}> {
-  ref: HTMLDivElement;
   simulation: any;
 
   constructor(props: Props) {
@@ -71,19 +70,13 @@ export default class App extends React.Component<Props, {}> {
 
   render() {
     const { width, height, graph } = this.props;
-    const style = {
-      width,
-      height
-    };
-
     return (
-      <div style={style} ref={(ref: any) => this.ref = ref}>
-        <svg className="container" width={width} height={height}>
-          <Links links={graph.links} />
-          <Nodes nodes={graph.nodes} simulation={this.simulation} />
-          <Labels nodes={graph.nodes} />
-        </svg>
-      </div>
+      <svg className="container"
+        width={width} height={height}>
+        <Links links={graph.links} />
+        <Nodes nodes={graph.nodes} simulation={this.simulation} />
+        <Labels nodes={graph.nodes} />
+      </svg>
     );
   }
 }
