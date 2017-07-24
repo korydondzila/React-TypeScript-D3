@@ -27,5 +27,3 @@ yarn-error.log*
 
 /.chrome/
 /.vscode
-/public
-/client/public
